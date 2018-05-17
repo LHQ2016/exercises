@@ -170,7 +170,8 @@ public class Ping {
             return;
         }
         if (args.equals("quit")){
-            System.exit(0);
+//            System.exit(0);
+            return;
         }
         int firstArg = 0;
         if (Pattern.matches("[0-9]+", args[0])) {
