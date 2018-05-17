@@ -13,6 +13,7 @@ public class TestBuffer {
         buf.position(5);
         buf.mark();
         buf.flip();
+//        buf.clear();
         System.out.println(buf);
         System.out.println("-----------");
         for (int i = 0; i < buf.limit(); i++) {
