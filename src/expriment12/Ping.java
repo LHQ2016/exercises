@@ -158,7 +158,7 @@ public class Ping {
     }
     public static void main(String[] args) throws InterruptedException,
             IOException {
-        args = new String[] { "8888", "www.baidu.com" };
+        args = new String[] { "80", "www.baidu.com" };
         if (args.length < 1) {
             System.err.println("Usage: java Ping [port] host...");
             return;
