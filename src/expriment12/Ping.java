@@ -1,10 +1,15 @@
 package expriment12;
 
-import java.io.*;
-import java.net.*;
-import java.nio.channels.*;
-import java.util.*;
-import java.util.regex.*;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.SocketChannel;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.regex.Pattern;
+
 public class Ping {
     static int DAYTIME_PORT = 13;
     static int port = DAYTIME_PORT;
@@ -158,10 +163,14 @@ public class Ping {
     }
     public static void main(String[] args) throws InterruptedException,
             IOException {
-        args = new String[] { "80", "www.baidu.com" };
+        port = 80;
+//        args = new String[] { "80", "220.181.12.218" };
         if (args.length < 1) {
             System.err.println("Usage: java Ping [port] host...");
             return;
+        }
+        if (args.equals("quit")){
+            System.exit(0);
         }
         int firstArg = 0;
         if (Pattern.matches("[0-9]+", args[0])) {
