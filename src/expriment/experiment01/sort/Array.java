@@ -1,4 +1,4 @@
-package experiment.sort;
+package expriment.experiment01.sort;
 
 public class Array {//产生1M的有序与无序数组
     private static final int LENGTH =1*1024*1024;
